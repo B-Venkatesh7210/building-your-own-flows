@@ -1,0 +1,42 @@
+# version format ex. "0.0.1"
+version: "0.0.1"
+
+# Basic metadata for the agent
+metadata:
+  name: "rap-song-generator"
+  description: "This flow helps you write a rap song."
+  author: "venmus" # This username should match your account username
+  tags: [rap, poetry, song, lyrics, writing] # Tags are keywords used to categorize your flow
+  private: false # Access control for your flows (true/false)
+
+# Define the input variables required
+inputs:
+  topic:
+    type: string #Currently we only support String format
+    description: "Enter the topic of the rap song."
+    required: true
+    example: "Love, romantic, hard life, etc."
+  style:
+    type: string
+    description: "Enter the name of the rapper whose style you want to mimic."
+    required: true
+    example: "Eminem, Kanye West, Drake, etc."
+
+# LLM configuration
+model:
+  provider: "meta" # e.g., anthropic, openai, meta, etc.
+  name: "llama-3.1-8b-instruct:free"
+
+# # Dataset configuration (Optional)
+# dataset:
+#   source: "author_name/dataset_name" # Make sure this data set exists
+
+# Prompt template configuration
+prompt: |
+  Write a rap song describing {topic} in the style and flow of rapper {style}.
+
+# ReadME configuration
+readme: |
+  This flow helps you write a rap song. It generates a rap song based on the topic and style you provide. The model used in this flow is llama-3.1-8b-instruct:free.
+
+  Example: Input1: Love, Input2: Eminem
