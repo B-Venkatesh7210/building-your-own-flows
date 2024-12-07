@@ -1,4 +1,4 @@
-# Building Your Own Flows
+# Mira flow for polygon stack
 
 This repository demonstrates how to use the **Mira SDK** to build and execute custom flows on the Mira Marketplace. It includes an example implementation for creating and managing your own flows, enabling the integration of tailored workflows into your projects. 
 
