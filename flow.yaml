@@ -3,24 +3,19 @@ version: "0.0.1"
 
 # Basic metadata for the agent
 metadata:
-  name: "rap-song-generator"
-  description: "This flow helps you write a rap song."
+  name: "polygon-stack"
+  description: "This flow will help you answer the questions about Polygon Stack inclding Agglayer, Poygon CDK, Polygen Miden, Plonky 2 and 3, Type 1 Prover, Polygon Edge etc."
   author: "venmus" # This username should match your account username
-  tags: [rap, poetry, song, lyrics, writing] # Tags are keywords used to categorize your flow
+  tags: [polygon, ai, blockchain] # Tags are keywords used to categorize your flow
   private: false # Access control for your flows (true/false)
 
 # Define the input variables required
 inputs:
-  topic:
+  question:
     type: string #Currently we only support String format
-    description: "Enter the topic of the rap song."
+    description: "Enter your question."
     required: true
-    example: "Love, romantic, hard life, etc."
-  style:
-    type: string
-    description: "Enter the name of the rapper whose style you want to mimic."
-    required: true
-    example: "Eminem, Kanye West, Drake, etc."
+    example: "What does Polygon Edge do?"
 
 # LLM configuration
 model:
@@ -29,16 +24,16 @@ model:
 
 # For supported LLM models, refer to the documentation: https://docs.mira.network/sdk/core-concepts
 
-# # Dataset configuration (Optional)
-# dataset:
-#   source: "author_name/dataset_name" # Make sure this data set exists
+# Dataset configuration (Optional)
+dataset:
+  source: "venmus/polygon-stack" # Make sure this data set exists
 
 # Prompt template configuration
 prompt: |
-  Write a rap song describing {topic} in the style and flow of rapper {style}.
+  Answer the question: {question}
 
 # ReadME configuration
 readme: |
-  This flow helps you write a rap song. It generates a rap song based on the topic and style you provide. The model used in this flow is llama-3.1-8b-instruct:free.
+  This flow will help you answer all your FAQ's about Polygon Stack inclding Agglayer, Poygon CDK, Polygen Miden, Plonky 2 and 3, Type 1 Prover, Polygon Edge etc. The model used in this flow is llama-3.1-8b-instruct:free.
 
-  Example: Input1: Love, Input2: Eminem
+  Example: question: What does Polygon Edge do?
