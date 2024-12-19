@@ -12,7 +12,7 @@ client = MiraClient(config={"API_KEY": api_key})
 
 flow = Flow(source="flow.yaml")
 
-input_dict = {"question": "What does Polygon Edge do?"}
+input_dict = {"topic": "Hard Life", "style": "Lil Wayne"}
 
 response = client.flow.test(flow, input_dict)
 
