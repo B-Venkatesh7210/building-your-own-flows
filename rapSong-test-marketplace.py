@@ -10,7 +10,7 @@ api_key = os.getenv("API_KEY")
 # Initialize the client
 client = MiraClient(config={"API_KEY": api_key})
 
-version = "0.0.1"
+version = "0.0.2"
 input_data = {"topic": "Hard Life", "style": "Lil Wayne"}
 
 # If no version is provided it'll use latest version by default

@@ -1,5 +1,5 @@
 # version format ex. "0.0.1"
-version: "0.0.1"
+version: "0.0.2"
 
 # Basic metadata for the agent
 metadata:
@@ -24,8 +24,8 @@ inputs:
 
 # LLM configuration
 model:
-  provider: "meta" # e.g., anthropic, openai, meta, etc.
-  name: "llama-3.1-8b-instruct:free"
+  provider: "anthropic" # e.g., anthropic, openai, meta, etc.
+  name: "claude-3.5-sonnet"
 
 # For supported LLM models, refer to the documentation: https://docs.mira.network/sdk/core-concepts
 
